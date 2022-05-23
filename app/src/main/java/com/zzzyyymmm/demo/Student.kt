@@ -7,6 +7,8 @@ class Student(
     private val age: String
 ) :
     Person(name, age), Study {
+    constructor(name: String, age: String) : this("", "", name, age)
+
     fun toStr() {
         println("sno:%s,grade:%s,name:%s,age:%s".format(sno, grade, name, age))
     }

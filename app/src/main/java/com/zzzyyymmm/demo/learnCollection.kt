@@ -12,6 +12,10 @@ fun main() {
     val student = Student("123", "223", "323", "423")
     println(student.toStr())
     study(student)
+
+    val stu2 = Student("name2","age2")
+    println(stu2.toStr())
+
     val cellphone = Cellphone("xm", 1899.0)
     println(cellphone)
     Singleton.printMsg()
