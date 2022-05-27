@@ -4,11 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btn"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="按钮" />
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="跳转界面2" />
+
+        <Button
+            android:id="@+id/interBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上网按钮" />
+
+        <Button
+            android:id="@+id/telBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="电话按钮" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/normalBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="normal"/>
+
+        <Button
+            android:id="@+id/dialogBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="dialog"/>
+    </LinearLayout>
 </LinearLayout>

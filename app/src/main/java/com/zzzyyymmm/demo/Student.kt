@@ -14,10 +14,17 @@ class Student(
     }
 
     override fun readBooks() {
-        println("%s read books".format(name))
+        println("${name} read books")
     }
 
     override fun doHomeWork() {
         println("%s do homework".format(name))
+    }
+
+    fun doStudy(study: Study?) {
+        study?.let {
+            it.readBooks()
+            it.doHomeWork()
+        }
     }
 }
