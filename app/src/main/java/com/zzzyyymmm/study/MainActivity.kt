@@ -14,29 +14,18 @@ class MainActivity : AppCompatActivity() {
 
     private val tag = "MainActivity"
 
+    private val lifecycleFlag = false
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.e(tag, "onCreate")
+        if(lifecycleFlag)Log.e(tag, "onCreate")
+        Log.e(tag, this.toString())
+        Log.e(tag, "task id is $taskId")
 
         setContentView(R.layout.activity_main)
         val string = savedInstanceState?.getString("tempDate")
         Log.e(tag, "tag savedMsg is $string")
-
-
-        //生命流程
-        val normalBtn = findViewById<Button>(R.id.normalBtn)
-        val dialogBtn = findViewById<Button>(R.id.dialogBtn)
-
-        normalBtn.setOnClickListener {
-            val intent = Intent(this, NormalActivity::class.java)
-            startActivity(intent)
-        }
-
-        dialogBtn.setOnClickListener {
-            val intent = Intent(this, DialogActivity::class.java)
-            startActivity(intent)
-        }
 
 
         //按钮传值跳转
@@ -64,6 +53,28 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+
+        //生命流程
+        val normalBtn = findViewById<Button>(R.id.normalBtn)
+        val dialogBtn = findViewById<Button>(R.id.dialogBtn)
+
+        normalBtn.setOnClickListener {
+            val intent = Intent(this, NormalActivity::class.java)
+            startActivity(intent)
+        }
+
+        dialogBtn.setOnClickListener {
+            val intent = Intent(this, DialogActivity::class.java)
+            startActivity(intent)
+        }
+
+        //启动模式
+        val standardBtn = findViewById<Button>(R.id.standardBtn)
+        standardBtn.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
@@ -74,32 +85,32 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        Log.e(tag, "onStart")
+        if(lifecycleFlag)Log.e(tag, "onStart")
     }
 
     override fun onResume() {
         super.onResume()
-        Log.e(tag, "onResume")
+        if(lifecycleFlag)Log.e(tag, "onResume")
     }
 
     override fun onPause() {
         super.onPause()
-        Log.e(tag, "onPause")
+        if(lifecycleFlag)Log.e(tag, "onPause")
     }
 
     override fun onStop() {
         super.onStop()
-        Log.e(tag, "onStop")
+        if(lifecycleFlag)Log.e(tag, "onStop")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.e(tag, "onDestroy")
+        if(lifecycleFlag)Log.e(tag, "onDestroy")
     }
 
     override fun onRestart() {
         super.onRestart()
-        Log.e(tag, "onRestart")
+        if(lifecycleFlag)Log.e(tag, "onRestart")
     }
 
 
