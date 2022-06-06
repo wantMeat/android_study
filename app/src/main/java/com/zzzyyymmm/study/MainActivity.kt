@@ -10,7 +10,7 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
 
     private val tag = "MainActivity"
 
@@ -29,8 +29,8 @@ class MainActivity : AppCompatActivity() {
 
 
         //按钮传值跳转
-        val btn = findViewById<Button>(R.id.btn)
-        btn.setOnClickListener {
+        val valBtn = findViewById<Button>(R.id.valBtn)
+        valBtn.setOnClickListener {
             //val intent = Intent(this, SecondActivity::class.java)
             val intent = Intent("com.zzzyyymmm.study.ACTION_START")
             intent.putExtra("title", "这是界面1的传值")
@@ -74,6 +74,13 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
+
+        val jumpSecondBtn = findViewById<Button>(R.id.jumpSecondBtn)
+        jumpSecondBtn.setOnClickListener {
+            val intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent)
+        }
+
 
     }
 

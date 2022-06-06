@@ -1,10 +1,13 @@
 package com.zzzyyymmm.study
 
+import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 
-class ThirdActivity : AppCompatActivity() {
+class ThirdActivity : BaseActivity() {
 
     private val tag = "ThirdActivity"
 
@@ -12,5 +15,20 @@ class ThirdActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         Log.e(tag, "task id is $taskId")
         setContentView(R.layout.activity_third)
+
+
+        val finishBtn = findViewById<Button>(R.id.finishBtn)
+        finishBtn.setOnClickListener {
+            ActivityCollector.finishAll()
+        }
+    }
+
+    companion object {
+        fun actionStart(context: Context, msg: String, data: String) {
+            val intent = Intent(context, ThirdActivity::class.java)
+            intent.putExtra("msg", msg)
+            intent.putExtra("data", msg)
+            context.startActivity(intent)
+        }
     }
 }

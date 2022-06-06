@@ -13,10 +13,10 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/btn"
+            android:id="@+id/valBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="跳转界面2" />
+            android:text="传值界面2" />
 
         <Button
             android:id="@+id/interBtn"
@@ -57,5 +57,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="standard"/>
+
+
+        <Button
+            android:id="@+id/jumpSecondBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="跳转界面2" />
     </LinearLayout>
 </LinearLayout>

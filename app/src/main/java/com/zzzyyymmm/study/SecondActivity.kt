@@ -7,7 +7,7 @@ import android.util.Log
 import android.widget.Button
 import android.widget.Toast
 
-class SecondActivity : AppCompatActivity() {
+class SecondActivity : BaseActivity() {
 
     private val tag = "SecondActivity"
     private val lifecycleFlag = true
@@ -31,8 +31,7 @@ class SecondActivity : AppCompatActivity() {
 
         val thirdBtn = findViewById<Button>(R.id.thirdBtn)
         thirdBtn.setOnClickListener {
-            val intent = Intent(this, ThirdActivity::class.java)
-            startActivity(intent)
+            ThirdActivity.actionStart(this, "这是msg", "这是data")
         }
     }
 
