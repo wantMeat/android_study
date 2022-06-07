@@ -81,6 +81,12 @@ class MainActivity : BaseActivity() {
             startActivity(intent)
         }
 
+        //控件界面
+        val viewBtn = findViewById<Button>(R.id.viewBtn)
+        viewBtn.setOnClickListener {
+            val intent = Intent(this, ViewActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 

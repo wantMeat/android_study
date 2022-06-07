@@ -19,6 +19,9 @@ fun main() {
     val cellphone = Cellphone("xm", 1899.0)
     println(cellphone)
     Singleton.printMsg()
+
+    StaticTest.staticFun()
+    helperPrintln()
 }
 
 

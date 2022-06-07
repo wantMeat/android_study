@@ -17,6 +17,7 @@ class ThirdActivity : BaseActivity() {
         setContentView(R.layout.activity_third)
 
 
+
         val finishBtn = findViewById<Button>(R.id.finishBtn)
         finishBtn.setOnClickListener {
             ActivityCollector.finishAll()
@@ -25,10 +26,10 @@ class ThirdActivity : BaseActivity() {
 
     companion object {
         fun actionStart(context: Context, msg: String, data: String) {
-            val intent = Intent(context, ThirdActivity::class.java)
-            intent.putExtra("msg", msg)
-            intent.putExtra("data", msg)
-            context.startActivity(intent)
+            context.startActivity(Intent(context, ThirdActivity::class.java).apply {
+                putExtra("msg", msg)
+                putExtra("data", msg)
+            })
         }
     }
 }
