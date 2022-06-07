@@ -87,6 +87,12 @@ class MainActivity : BaseActivity() {
             val intent = Intent(this, ViewActivity::class.java)
             startActivity(intent)
         }
+        //标题栏demo
+        val titleBarBtn = findViewById<Button>(R.id.titleBarBtn)
+        titleBarBtn.setOnClickListener {
+            val intent = Intent(this, TitleBarActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 
