@@ -93,6 +93,12 @@ class MainActivity : BaseActivity() {
             val intent = Intent(this, TitleBarActivity::class.java)
             startActivity(intent)
         }
+        //listemo
+        val jumpListBtn = findViewById<Button>(R.id.jumpListBtn)
+        jumpListBtn.setOnClickListener {
+            val intent = Intent(this, ListTestActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 
