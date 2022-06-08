@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Study">
         <activity
+            android:name=".ListTestActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.zzzyyymmm.custom.TitleLayout"
+            android:exported="false" />
+        <activity
             android:name=".TitleBarActivity"
             android:exported="false" />
         <activity

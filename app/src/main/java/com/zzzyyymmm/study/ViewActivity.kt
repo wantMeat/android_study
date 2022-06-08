@@ -26,7 +26,7 @@ class ViewActivity : BaseActivity(), View.OnClickListener {
                 loadingBar.visibility = View.GONE
             } else {
                 loadingBar.visibility = View.VISIBLE
-                loadingBar.max += 10
+                loadingBar.max = loadingBar.max + 10
             }
         }
 

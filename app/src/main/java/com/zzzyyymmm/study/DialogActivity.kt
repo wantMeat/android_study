@@ -12,6 +12,7 @@ class DialogActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         Log.e(tag, "onCreate")
         setContentView(R.layout.activity_dialog)
+        supportActionBar?.hide()
     }
 
 

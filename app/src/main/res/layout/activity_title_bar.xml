@@ -30,7 +30,7 @@
         android:textSize="35sp" />
 
     <Button
-        android:id="@+id/beditBarBtn"
+        android:id="@+id/editBarBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
