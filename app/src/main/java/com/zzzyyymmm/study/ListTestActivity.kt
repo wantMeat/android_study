@@ -16,7 +16,7 @@ class ListTestActivity : AppCompatActivity() {
         "Pineapple", "Strawberry", "Cherry", "Mango"
     )
 
-    private val fruitList = ArrayList<Fruit>();
+    private val fruitList = ArrayList<Fruit>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

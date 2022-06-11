@@ -99,6 +99,11 @@ class MainActivity : BaseActivity() {
             val intent = Intent(this, ListTestActivity::class.java)
             startActivity(intent)
         }
+        val jumpRecycleListBtn = findViewById<Button>(R.id.jumpRecycleListBtn)
+        jumpRecycleListBtn.setOnClickListener {
+            val intent = Intent(this, RecyclerViewActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 
