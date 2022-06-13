@@ -19,7 +19,7 @@ class MainActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        if(lifecycleFlag)Log.e(tag, "onCreate")
+        if (lifecycleFlag) Log.e(tag, "onCreate")
         Log.e(tag, this.toString())
         Log.e(tag, "task id is $taskId")
 
@@ -105,6 +105,12 @@ class MainActivity : BaseActivity() {
             startActivity(intent)
         }
 
+        val jumpGridListBtn = findViewById<Button>(R.id.jumpGridListBtn)
+        jumpGridListBtn.setOnClickListener {
+            val intent = Intent(this, StaggeredGridActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
@@ -115,32 +121,32 @@ class MainActivity : BaseActivity() {
 
     override fun onStart() {
         super.onStart()
-        if(lifecycleFlag)Log.e(tag, "onStart")
+        if (lifecycleFlag) Log.e(tag, "onStart")
     }
 
     override fun onResume() {
         super.onResume()
-        if(lifecycleFlag)Log.e(tag, "onResume")
+        if (lifecycleFlag) Log.e(tag, "onResume")
     }
 
     override fun onPause() {
         super.onPause()
-        if(lifecycleFlag)Log.e(tag, "onPause")
+        if (lifecycleFlag) Log.e(tag, "onPause")
     }
 
     override fun onStop() {
         super.onStop()
-        if(lifecycleFlag)Log.e(tag, "onStop")
+        if (lifecycleFlag) Log.e(tag, "onStop")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        if(lifecycleFlag)Log.e(tag, "onDestroy")
+        if (lifecycleFlag) Log.e(tag, "onDestroy")
     }
 
     override fun onRestart() {
         super.onRestart()
-        if(lifecycleFlag)Log.e(tag, "onRestart")
+        if (lifecycleFlag) Log.e(tag, "onRestart")
     }
 
 

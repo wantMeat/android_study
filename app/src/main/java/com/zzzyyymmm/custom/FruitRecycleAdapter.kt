@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.zzzyyymmm.ToastUtil
 import com.zzzyyymmm.entity.Fruit
 import com.zzzyyymmm.study.R
 import com.zzzyyymmm.study.RecyclerViewActivity
@@ -25,7 +26,20 @@ class FruitRecycleAdapter(private val fruitList: List<Fruit>) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FruitViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.fruit_item, parent, false)
-        return FruitViewHolder(view)
+        val fruitViewHolder = FruitViewHolder(view)
+        fruitViewHolder.fruitImage.setOnClickListener {
+            val adapterPosition = fruitViewHolder.bindingAdapterPosition
+            val fruit = fruitList[adapterPosition]
+            ToastUtil.shortToast(parent.context, "你点击了${fruit.imageId}")
+        }
+        fruitViewHolder.fruitName.setOnClickListener {
+            val adapterPosition = fruitViewHolder.bindingAdapterPosition
+            val fruit = fruitList[adapterPosition]
+            ToastUtil.shortToast(parent.context, "你点击了${fruit.name}")
+        }
+        return fruitViewHolder
+
+
     }
 
     override fun onBindViewHolder(holder: FruitViewHolder, position: Int) {
