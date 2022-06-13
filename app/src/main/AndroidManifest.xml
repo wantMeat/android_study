@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Study">
         <activity
+            android:name=".UIDemoActivity"
+            android:exported="false" />
+        <activity
             android:name=".StaggeredGridActivity"
             android:exported="false" />
         <activity

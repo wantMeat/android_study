@@ -110,6 +110,12 @@ class MainActivity : BaseActivity() {
             val intent = Intent(this, StaggeredGridActivity::class.java)
             startActivity(intent)
         }
+        //UIdemo
+        val uiDemoBtn = findViewById<Button>(R.id.uiDemoBtn)
+        uiDemoBtn.setOnClickListener {
+            val intent = Intent(this, UIDemoActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 

@@ -23,6 +23,12 @@
             android:text="传值界面2" />
 
         <Button
+            android:id="@+id/jumpSecondBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="跳转界面2" />
+
+        <Button
             android:id="@+id/interBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -51,12 +57,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="dialog" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
 
         <Button
             android:id="@+id/standardBtn"
@@ -64,13 +64,6 @@
             android:layout_height="wrap_content"
             android:text="standard"
             android:textAllCaps="false" />
-
-
-        <Button
-            android:id="@+id/jumpSecondBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="跳转界面2" />
     </LinearLayout>
 
     <LinearLayout
@@ -100,17 +93,29 @@
             android:id="@+id/jumpListBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="跳转列表控件" />
+            android:text="列表控件" />
         <Button
             android:id="@+id/jumpRecycleListBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="跳转Recycle列表控件" />
+            android:text="Recycle列表" />
         <Button
             android:id="@+id/jumpGridListBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="跳转Grid列表控件" />
+            android:text="Grid列表" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/uiDemoBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="界面demo" />
     </LinearLayout>
 
 </LinearLayout>

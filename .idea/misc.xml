@@ -4,16 +4,18 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/code/android/android_study/app/src/main/res/layout/activity_recycler_view.xml" value="0.35208333333333336" />
-        <entry key="..\:/code/android/android_study/app/src/main/res/layout/activity_staggered_grid.xml" value="0.35208333333333336" />
         <entry key="..\:/code/android/android_study/app/src/main/res/layout/activity_title_bar.xml" value="0.24954710144927536" />
         <entry key="..\:/code/android/android_study/app/src/main/res/layout/fruit_item.xml" value="0.358695652173913" />
         <entry key="..\:/code/android/study/app/src/main/res/layout/activity_layout.xml" value="0.24114583333333334" />
-        <entry key="..\:/code/android/study/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/code/android/study/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/code/android/study/app/src/main/res/layout/activity_normal.xml" value="0.24114583333333334" />
-        <entry key="..\:/code/android/study/app/src/main/res/layout/activity_recycler_view.xml" value="0.16145833333333334" />
+        <entry key="..\:/code/android/study/app/src/main/res/layout/activity_recycler_view.xml" value="0.33" />
         <entry key="..\:/code/android/study/app/src/main/res/layout/activity_title_bar.xml" value="0.22708333333333333" />
+        <entry key="..\:/code/android/study/app/src/main/res/layout/activity_uidemo.xml" value="0.33958333333333335" />
         <entry key="..\:/code/android/study/app/src/main/res/layout/activity_view.xml" value="0.22708333333333333" />
-        <entry key="..\:/code/android/study/app/src/main/res/layout/fruit_item.xml" value="0.1" />
+        <entry key="..\:/code/android/study/app/src/main/res/layout/fruit_item.xml" value="0.25" />
+        <entry key="..\:/code/android/study/app/src/main/res/layout/msg_left_item.xml" value="0.33958333333333335" />
+        <entry key="..\:/code/android/study/app/src/main/res/layout/msg_right_item.xml" value="0.33958333333333335" />
       </map>
     </option>
   </component>
