@@ -13,13 +13,17 @@ import com.zzzyyymmm.entity.Msg
 class UIDemoActivity : AppCompatActivity() {
 
     private val msgList = ArrayList<Msg>()
+    private lateinit var adapter: MsgAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_uidemo)
         initMsg()
         val uiRecycleView = findViewById<RecyclerView>(R.id.uiRecycleView)
-        val adapter = MsgAdapter(msgList)
+        if (!::adapter.isInitialized) {
+            adapter = MsgAdapter(msgList)
+        }
+
         val linearLayoutManager = LinearLayoutManager(this)
         uiRecycleView.layoutManager = linearLayoutManager
         uiRecycleView.adapter = adapter
