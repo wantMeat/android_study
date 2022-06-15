@@ -15,7 +15,7 @@
         android:layout_weight="1" />
 
     <FrameLayout
-        android:id="@+id/rightFragment"
+        android:id="@+id/rightFrameLayout"
         android:name="com.zzzyyymmm.custom.RightFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
