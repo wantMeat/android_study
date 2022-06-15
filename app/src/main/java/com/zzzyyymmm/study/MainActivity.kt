@@ -119,7 +119,7 @@ class MainActivity : BaseActivity() {
         //fragment
         val fragmentBtn = findViewById<Button>(R.id.fragmentBtn)
         fragmentBtn.setOnClickListener {
-            val intent = Intent(this, UIDemoActivity::class.java)
+            val intent = Intent(this, FragmentActivity::class.java)
             startActivity(intent)
         }
 

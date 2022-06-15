@@ -19,7 +19,4 @@ sealed class MsgViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val uiRightText: TextView = view.findViewById(R.id.uiRightText)
     }
 
-    class RightMsgViewHolder2(view: View) : MsgViewHolder(view) {
-        val uiRightText: TextView = view.findViewById(R.id.uiRightText)
-    }
 }

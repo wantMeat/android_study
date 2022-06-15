@@ -4,10 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     tools:context=".FragmentActivity">
 
     <fragment
+        android:id="@+id/leftFragment"
+        android:name="com.zzzyyymmm.custom.LeftFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <FrameLayout
+        android:id="@+id/rightFragment"
+        android:name="com.zzzyyymmm.custom.RightFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
 </LinearLayout>
