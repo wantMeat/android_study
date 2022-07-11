@@ -13,11 +13,14 @@
         <TextView
             android:id="@+id/newsTitle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textSize="20sp" />
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="5dp"
             android:background="#000" />
 
         <TextView
@@ -30,7 +33,7 @@
     </LinearLayout>
 
     <View
-        android:layout_width="1dp"
+        android:layout_width="5dp"
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:background="#000" />

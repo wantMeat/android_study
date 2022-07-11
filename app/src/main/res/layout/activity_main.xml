@@ -128,6 +128,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="fragment" />
+
+        <Button
+            android:id="@+id/newsMainBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="新闻主界面" />
     </LinearLayout>
 
 </LinearLayout>

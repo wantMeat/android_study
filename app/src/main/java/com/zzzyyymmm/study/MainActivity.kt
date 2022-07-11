@@ -8,7 +8,6 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Button
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : BaseActivity() {
 
@@ -120,6 +119,13 @@ class MainActivity : BaseActivity() {
         val fragmentBtn = findViewById<Button>(R.id.fragmentBtn)
         fragmentBtn.setOnClickListener {
             val intent = Intent(this, FragmentActivity::class.java)
+            startActivity(intent)
+        }
+
+        //新闻fragment
+        val newsMainBtn = findViewById<Button>(R.id.newsMainBtn)
+        newsMainBtn.setOnClickListener {
+            val intent = Intent(this, NewsMainActivity::class.java)
             startActivity(intent)
         }
 
