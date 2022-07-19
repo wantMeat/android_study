@@ -9,7 +9,7 @@
 
     <com.zzzyyymmm.custom.TitleLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -94,11 +94,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="列表控件" />
+
         <Button
             android:id="@+id/jumpRecycleListBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Recycle列表" />
+
         <Button
             android:id="@+id/jumpGridListBtn"
             android:layout_width="wrap_content"
@@ -116,12 +118,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="界面demo" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
 
         <Button
             android:id="@+id/fragmentBtn"
@@ -134,6 +130,37 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="新闻主界面" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/normalBroadcastMainBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="全局标准广播" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/jumpLoginBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="跳转登录界面" />
+
+        <Button
+            android:id="@+id/offLineBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="退出登录" />
     </LinearLayout>
 
 </LinearLayout>

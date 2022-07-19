@@ -11,6 +11,7 @@ import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.zzzyyymmm.demo.StringExtend.times
 import com.zzzyyymmm.entity.News
 import com.zzzyyymmm.study.R
 
@@ -53,12 +54,5 @@ class NewsTitleFragment : Fragment() {
         return newsList
     }
 
-    private fun getRandomLengthString(str: String): String {
-        val n = (1..20).random()
-        val builder = StringBuilder()
-        repeat(n) {
-            builder.append(str)
-        }
-        return builder.toString()
-    }
+    private fun getRandomLengthString(str: String) = str * (1..20).random()
 }

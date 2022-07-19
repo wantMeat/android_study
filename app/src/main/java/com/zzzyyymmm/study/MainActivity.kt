@@ -129,6 +129,27 @@ class MainActivity : BaseActivity() {
             startActivity(intent)
         }
 
+        //6.2 标准广播接收器
+        val normalBroadcastMainBtn = findViewById<Button>(R.id.normalBroadcastMainBtn)
+        normalBroadcastMainBtn.setOnClickListener {
+            val intent = Intent(this, BroadcastActivity::class.java)
+            startActivity(intent)
+        }
+
+        //6.4 强制下线功能
+        val jumpLoginBtn = findViewById<Button>(R.id.jumpLoginBtn)
+        jumpLoginBtn.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
+
+        val offLineBtn = findViewById<Button>(R.id.offLineBtn)
+        offLineBtn.setOnClickListener {
+            val intent = Intent("com.zzzyyymmm.study.FORCE_OFFLINE")
+            intent.setPackage(packageName)
+            sendBroadcast(intent)
+        }
+
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
@@ -137,7 +158,7 @@ class MainActivity : BaseActivity() {
         outState.putString("tempDate", tempDate)
     }
 
-    override fun onStart() {
+/*    override fun onStart() {
         super.onStart()
         if (lifecycleFlag) Log.e(tag, "onStart")
     }
@@ -165,7 +186,7 @@ class MainActivity : BaseActivity() {
     override fun onRestart() {
         super.onRestart()
         if (lifecycleFlag) Log.e(tag, "onRestart")
-    }
+    }*/
 
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

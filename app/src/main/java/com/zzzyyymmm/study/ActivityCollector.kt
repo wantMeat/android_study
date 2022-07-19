@@ -19,6 +19,6 @@ object ActivityCollector {
             }
         }
         activityList.clear()
-        android.os.Process.killProcess(android.os.Process.myPid())
+        //android.os.Process.killProcess(android.os.Process.myPid())
     }
 }
