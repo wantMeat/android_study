@@ -8,6 +8,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Button
 import android.widget.Toast
+import com.zzzyyymmm.study.no8.FileSaveActivity
 
 class MainActivity : BaseActivity() {
 
@@ -148,6 +149,13 @@ class MainActivity : BaseActivity() {
             val intent = Intent("com.zzzyyymmm.study.FORCE_OFFLINE")
             intent.setPackage(packageName)
             sendBroadcast(intent)
+        }
+
+        //7.1 文件保存
+        val jumpFileSaveBtn = findViewById<Button>(R.id.jumpFileSaveBtn)
+        jumpFileSaveBtn.setOnClickListener {
+            val intent = Intent(this, FileSaveActivity::class.java)
+            startActivity(intent)
         }
 
     }
