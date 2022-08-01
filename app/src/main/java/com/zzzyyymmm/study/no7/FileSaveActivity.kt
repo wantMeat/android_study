@@ -1,7 +1,6 @@
-package com.zzzyyymmm.study.no8
+package com.zzzyyymmm.study.no7
 
 import android.content.Context
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button

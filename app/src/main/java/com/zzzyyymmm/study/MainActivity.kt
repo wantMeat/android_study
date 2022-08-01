@@ -1,5 +1,6 @@
 package com.zzzyyymmm.study
 
+import android.content.ContentValues
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -8,7 +9,9 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Button
 import android.widget.Toast
-import com.zzzyyymmm.study.no8.FileSaveActivity
+import com.zzzyyymmm.database.MyDatabaseHelper
+import com.zzzyyymmm.study.no7.FileSaveActivity
+import com.zzzyyymmm.study.no8.ShareAllActivity
 
 class MainActivity : BaseActivity() {
 
@@ -155,6 +158,94 @@ class MainActivity : BaseActivity() {
         val jumpFileSaveBtn = findViewById<Button>(R.id.jumpFileSaveBtn)
         jumpFileSaveBtn.setOnClickListener {
             val intent = Intent(this, FileSaveActivity::class.java)
+            startActivity(intent)
+        }
+
+        //7.4 创建数据库
+        val dbHelper = MyDatabaseHelper(this, "bookStore.db", 3)
+        val createDbBtn = findViewById<Button>(R.id.createDbBtn)
+        val wd = dbHelper.writableDatabase
+        createDbBtn.setOnClickListener {
+            dbHelper.writableDatabase
+        }
+        val insertDbBtn = findViewById<Button>(R.id.insertDbBtn)
+        insertDbBtn.setOnClickListener {
+            wd.beginTransaction()
+            try {
+                val values = ContentValues().apply {
+                    put("author", "one")
+                    put("name", "one man")
+                    put("pages", "2000")
+                    put("price", "300")
+                }
+                wd.insert("book", null, values)
+
+                val values2 = ContentValues().apply {
+                    put("author", "two")
+                    put("name", "two two")
+                    put("pages", "10")
+                    put("price", "10.9")
+                }
+                wd.insert("book", null, values2)
+
+                val values3 = ContentValues().apply {
+                    put("author", "third")
+                    put("name", "third person")
+                    put("pages", "256")
+                    put("price", "15.9")
+                }
+                wd.execSQL(
+                    "insert into book(author, name, pages ,price)values(?, ?, ?, ?)",
+                    arrayOf("four, four ten", 100, 200)
+                )
+                wd.insert("book", null, values3)
+                //成功则提交
+                wd.setTransactionSuccessful()
+            } catch (e: Exception) {
+                wd.endTransaction()
+            }
+
+        }
+
+        val updateDbBtn = findViewById<Button>(R.id.updateDbBtn)
+        updateDbBtn.setOnClickListener {
+            val values = ContentValues().apply {
+                put("price", "12.9")
+            }
+            wd.update("book", values, "name = ?", arrayOf("two two"))
+        }
+
+        val deleteDbBtn = findViewById<Button>(R.id.deleteDbBtn)
+        deleteDbBtn.setOnClickListener {
+            wd.delete("book", "author = ?", arrayOf("one"))
+        }
+
+        val selectDbBtn = findViewById<Button>(R.id.selectDbBtn)
+        selectDbBtn.setOnClickListener {
+            //val query = wd.query("book", null, "id = ?", arrayOf("2"), null, null, null)
+            //val query = wd.query("book", null, null, null, null, null, null)
+            val query = wd.rawQuery("select * from book order by id", null)
+            if (query.moveToFirst()) {
+                do {
+                    val authorIndex = query.getColumnIndex("author")
+                    val nameIndex = query.getColumnIndex("name")
+                    val pagesIndex = query.getColumnIndex("pages")
+                    val priceIndex = query.getColumnIndex("price")
+                    val author = query.getString(authorIndex)
+                    val name = query.getString(nameIndex)
+                    val pages = query.getInt(pagesIndex)
+                    val price = query.getFloat(priceIndex)
+                    println("this data is author: $author name:$name pages $pages price: $price")
+                } while (query.moveToNext())
+            }
+            query.close()
+        }
+
+
+        //8 共享数据
+        val jumpShareDataBtn = findViewById<Button>(R.id.jumpShareDataBtn)
+        jumpShareDataBtn.setOnClickListener {
+            val intent = Intent(this, ShareAllActivity::class.java)
             startActivity(intent)
         }
 

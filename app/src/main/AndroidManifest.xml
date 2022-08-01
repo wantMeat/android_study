@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.zzzyyymmm.study">
+    package="com.zzzyyymmm.study" >
 
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -10,9 +12,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Study">
+        android:theme="@style/Theme.Study" >
         <activity
-            android:name="com.zzzyyymmm.study.no8.FileSaveActivity"
+            android:name=".no8.ShareAllActivity"
+            android:exported="false" />
+        <activity
+            android:name=".no7.FileSaveActivity"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
@@ -21,15 +26,15 @@
         <receiver
             android:name="com.zzzyyymmm.broadcast.BootCompleteReceiver"
             android:enabled="true"
-            android:exported="true">
-            <intent-filter android:priority="100">
+            android:exported="true" >
+            <intent-filter android:priority="100" >
                 <action android:name="com.zzzyyymmm.study.MY_BROADCAST" />
             </intent-filter>
         </receiver>
         <receiver
             android:name="com.zzzyyymmm.broadcast.AnotherBroadcastReceiver"
             android:enabled="true"
-            android:exported="false">
+            android:exported="false" >
             <intent-filter>
                 <action android:name="com.zzzyyymmm.study.MY_BROADCAST" />
             </intent-filter>
@@ -77,7 +82,7 @@
             android:exported="false" />
         <activity
             android:name=".ThirdActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -91,7 +96,7 @@
         <activity
             android:name=".SecondActivity"
             android:exported="true"
-            android:launchMode="singleInstance">
+            android:launchMode="singleInstance" >
             <intent-filter>
                 <action android:name="com.zzzyyymmm.study.ACTION_START" />
 
@@ -101,7 +106,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="开发demo">
+            android:label="开发demo" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
